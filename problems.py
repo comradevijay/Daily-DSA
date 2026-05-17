@@ -531,20 +531,90 @@
 #! 32. Count pairs with given sum
 #? Input: arr=[1,2,3,4,5], sum=5 → Output: 2 (pairs: 1+4, 2+3)
 
-def countPairs(arr, sum):
-    count = 0
-    for i in range(len(arr)-1):
-        for j in range(i+1, len(arr)):
-            if arr[i] + arr[j] == sum:
-                count += 1
-    return count   
+# def countPairs(arr, sum):
+#     count = 0
+#     for i in range(len(arr)-1):
+#         for j in range(i+1, len(arr)):
+#             if arr[i] + arr[j] == sum:
+#                 count += 1
+#     return count   
 
-ans = countPairs([1,2,3,4,5], 5)
-print(ans)
-        
-def countPairs(arr, sum):
+# ans = countPairs([1,2,3,4,5], 5)
+# print(ans)
+#?--------------------------------------------------- 
+# def countPairs(arr, sum):
+#     count = 0
+#     seen = set() 
+#     for num in arr:
+#         temp = sum - num
+#         if num in seen:
+#             count += 1 
+#         seen.add(temp)
+#     return count
+
+# result = countPairs([1,2,3,4,5], 5)
+# print(result)
     
+#! 33. Rotate array by k positions
+#?    Input: arr=[1,2,3,4,5], k=2 → Output: [4,5,1,2,3]
 
+# def rotateArray(arr, k):
+#     n = len(arr)
+#     rotations = k % n
+#     for i in range(rotations):
+#         last_ele = arr.pop()
+#         arr.insert(0, last_ele)
+#     return arr
 
-        
+# result = rotateArray([1,2,3,4,5], 3)
+# print(result)
+#? -------------------------------------------------------
+# def rotateArray(arr, k):
+#     k = k % len(arr) 
     
+#     return arr[-k:] + arr[:-k]
+    
+    
+# result = rotateArray([1,2,3,4,5], 3)
+# print(result)
+
+
+#! 34. Check if brackets are balanced
+#?    Input: s="(()())" → Output: "Yes"
+#?    Input: s="(()" → Output: "No"
+
+# def isValid(s):
+#     stack = []
+#     for c in s:
+#         if c == '(':
+#             stack.append(')')
+#         elif c == '{':
+#             stack.append('}')
+#         elif c == '[':
+#             stack.append(']')
+#         elif not stack or stack.pop() != c :
+#             return "No"
+#     if len(stack) == 0:
+#         return "Yes"
+#     else:
+#         return "No"
+# ans = isValid("}")
+# print(ans)
+            
+
+
+#! 35. Find all duplicates in array
+#?     Input: arr=[1,2,3,2,4,3] → Output: [2,3]
+
+# def allDuplicates(arr):
+#     seen = set() 
+#     dup = []
+#     for  i in arr:
+#         if i in seen:
+#             dup.append(i)  
+#         seen.add(i)
+#     return dup  
+
+# ans = allDuplicates([1,2,3,4,2,3])
+# print(ans)
+
