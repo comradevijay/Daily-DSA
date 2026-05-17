@@ -1,40 +1,4 @@
 
-#! largest in an array 
-
-# def largest(arr):
-#     max_val = arr[0]
-#     for i in arr:
-#         if i > max_val:
-#             max_val = i   
-#     return max_val
-
-# ans = largest([1,2,7,4,3])
-
-# print(ans)
-
-#! thrid largest in array
-
-# def thridLargest(arr):
-#     largest = float('-inf')
-#     secLargest = float('-inf')
-#     thridLargest = float('-inf')
-    
-#     for i in arr:
-#         if i > largest:
-#             thridLargest = secLargest
-#             secLargest = largest
-#             largest = i 
-#         elif i > secLargest and i < largest:
-#             thridLargest = secLargest 
-#             secLargest = i   
-#         elif i > thridLargest and i < secLargest:
-#             thridLargest = i   
-#     return thridLargest
-
-# ans = thridLargest([2,4,6,2,7,2,9,3]) 
-# print(ans)
-
-
 #! 1. Add two numbers given as parameters
 #?    Input: a=3, b=5 → Output: 8
 
@@ -481,34 +445,6 @@
 # ans = twoSum([1,2,3,4], 5)
 # print(ans)
 
-#! Substrings of Size Three
-
-# def subString(s):
-#     n = len(s)
-#     l = 0
-#     ans = 0
-#     dici = {}
-#     k = 3
-#     for r in range(n):
-#         if s[r] in dici:
-#             dici[s[r]] += 1
-#         else:
-#             dici[s[r]] = 1
-        
-#         if r-l ==k:
-#             dici[s[l]] -= 1
-#             if dici[s[l]] == 0:
-#                 dici.pop(s[l])
-#             l+=1
-            
-#         if len(dici) == k:
-#             ans += 1
-#     return ans
-
-# result = subString("xyzzaz")
-# print(result)
-
-
 #! 31. Find longest substring without repeating characters
 #?    Input: s="abcabcbb" → Output: 3 ("abc")
 
@@ -617,4 +553,72 @@
 
 # ans = allDuplicates([1,2,3,4,2,3])
 # print(ans)
+
+
+
+#todo Additional Problems
+
+
+#! largest in an array 
+
+# def largest(arr):
+#     max_val = arr[0]
+#     for i in arr:
+#         if i > max_val:
+#             max_val = i   
+#     return max_val
+
+# ans = largest([1,2,7,4,3])
+
+# print(ans)
+
+#! thrid largest in array
+
+# def thridLargest(arr):
+#     largest = float('-inf')
+#     secLargest = float('-inf')
+#     thridLargest = float('-inf')
+    
+#     for i in arr:
+#         if i > largest:
+#             thridLargest = secLargest
+#             secLargest = largest
+#             largest = i 
+#         elif i > secLargest and i < largest:
+#             thridLargest = secLargest 
+#             secLargest = i   
+#         elif i > thridLargest and i < secLargest:
+#             thridLargest = i   
+#     return thridLargest
+
+# ans = thridLargest([2,4,6,2,7,2,9,3]) 
+# print(ans)
+
+
+#! Substrings of Size Three
+
+# def subString(s):
+#     n = len(s)
+#     l = 0
+#     ans = 0
+#     dici = {}
+#     k = 3
+#     for r in range(n):
+#         if s[r] in dici:
+#             dici[s[r]] += 1
+#         else:
+#             dici[s[r]] = 1
+        
+#         if r-l ==k:
+#             dici[s[l]] -= 1
+#             if dici[s[l]] == 0:
+#                 dici.pop(s[l])
+#             l+=1
+            
+#         if len(dici) == k:
+#             ans += 1
+#     return ans
+
+# result = subString("xyzzaz")
+# print(result)
 
