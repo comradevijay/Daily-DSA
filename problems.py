@@ -542,7 +542,8 @@ def countPairs(arr, sum):
 ans = countPairs([1,2,3,4,5], 5)
 print(ans)
         
-
+def countPairs(arr, sum):
+    
 
 
         
