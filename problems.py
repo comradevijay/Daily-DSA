@@ -295,14 +295,14 @@
 #         return True 
 #     if n % 2 == 0:
 #         return False
-#     for i in range(2, int(n*0.5) + 1, 2):
+#     for i in range(3, int(n*0.5) + 1, 2):
 #         if n % i == 0:
 #             return False
 #     return True
 
 # def primeNum(n):
 #     arr = []
-#     for i in range(1,n+1):
+#     for i in range(n+1):
 #         if isPrime(i):
 #             arr.append(i)
 #     return arr
