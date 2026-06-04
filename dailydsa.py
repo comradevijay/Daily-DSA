@@ -21,8 +21,21 @@ def removeElement(nums, val):
     l = 0
     for r in range(len(nums)):
         if nums[r] != val:
-            nums[l] = nums[r]
+            nums[l] = nums[r]   
             l += 1
     return l
 
 # print(removeElement([3, 2, 2, 3], 3))
+
+
+#! 349. Intersection of Two Arrays
+
+def arrayIntersection(nums1, nums2):
+    arr = []
+    for i in nums1:
+        if i in nums2 and i not in arr:
+            arr.append(i)   
+    return arr   
+
+print(arrayIntersection([1,2,2,1], [2,2]))
+            
