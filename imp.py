@@ -511,3 +511,22 @@
 #         return 'Not amstrong'
 
 # print(amstrong(153))
+
+def minWords(arr, potion):
+    needed = set(potion)
+    result = []
+    
+    while needed:
+        bestWord = ""
+        covered = set()   
+        for word in arr:
+            common = needed & set(word)
+            if len(common) > len(covered):
+                bestWord = word   
+                covered = common
+        result.append(bestWord)
+        needed -= covered
+    
+    return result
+
+print(minWords(['ram', 'vijay', 'krish'], 'isha'))
