@@ -32,10 +32,13 @@ def removeElement(nums, val):
 
 def arrayIntersection(nums1, nums2):
     arr = []
+    nums1 = set(nums1)
+    nums2 = set(nums2)
     for i in nums1:
         if i in nums2 and i not in arr:
             arr.append(i)   
     return arr   
 
-print(arrayIntersection([1,2,2,1], [2,2]))
+# print(arrayIntersection([1,2,2,1], [2,2]))
+
             
