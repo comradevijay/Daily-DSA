@@ -71,6 +71,7 @@ def sortedSquares(nums):
         nums[i] = abs(nums[i])*abs(nums[i])
         print(nums[i])
     nums.sort()
-    # return nums
+    return nums
+
 
 # print(sortedSquares([-4,-1,0,3,10]))
