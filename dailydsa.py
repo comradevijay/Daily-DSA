@@ -41,4 +41,36 @@ def arrayIntersection(nums1, nums2):
 
 # print(arrayIntersection([1,2,2,1], [2,2]))
 
-            
+#! 88. Merge Sorted Array
+#? Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+#? Output: [1,2,2,3,5,6]
+
+def mergeSortedArray(nums1, m, nums2, n):
+    nums1[m:] = nums2[:n]
+    nums1.sort()
+    
+    print(nums1) 
+
+    i = len(nums1)-m   
+    j = 0
+    for i in range(len(nums1)):
+        for j in range(len(nums2)):
+            if nums1[i] == 0:
+                nums1[i], nums2[j] = nums2[j], nums1[i]
+    nums1.sort()
+    return nums1 
+
+# print(mergeSortedArray([1,2,3,0,0,0], 3, [2,5,6], 3))
+
+#! 977. Squares of a Sorted Array
+#? Input: nums = [-4,-1,0,3,10]
+#? Output: [0,1,9,16,100]
+
+def sortedSquares(nums):
+    for i in range(len(nums)):
+        nums[i] = abs(nums[i])*abs(nums[i])
+        print(nums[i])
+    nums.sort()
+    return nums
+
+# print(sortedSquares([-4,-1,0,3,10]))
