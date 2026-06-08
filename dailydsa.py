@@ -93,3 +93,17 @@ def singleNumber(nums):
     return m
 
 # print(singleNumber([2,2,1]))
+
+#! 3512. Minimum Operations to Make Array Sum Divisible by K
+#? Input: nums = [3,9,7], k = 5
+#? Output: 4
+
+def minOperations(nums, k):
+    total = 0
+    for i in nums:
+        total += i   
+    return total % k   
+
+    # return sum(nums) % k
+
+# print(minOperations([3,9,7], 5))
