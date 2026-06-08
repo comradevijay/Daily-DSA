@@ -75,3 +75,21 @@ def sortedSquares(nums):
 
 
 # print(sortedSquares([-4,-1,0,3,10]))
+
+#! 136. Single Number
+#? Input: nums = [4,1,2,1,2]
+#? Output: 4
+
+def singleNumber(nums):
+    for i in range(len(nums)):
+        if nums.count(nums[i]) == 1:
+            return nums[i]
+    
+    # -----------------------------------
+    
+    m = 0
+    for i in nums:
+        m = m^i    
+    return m
+
+# print(singleNumber([2,2,1]))
