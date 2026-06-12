@@ -157,5 +157,18 @@ def differenceOfSums(n, m):
             num2+=i
     return num1 - num2 
 
-print(differenceOfSums(10, 3))
+# print(differenceOfSums(10, 3))
+
+#! 3190. Find Minimum Operations to Make All Elements Divisible by Three
+#? Input: nums = [1,2,3,4]
+#? Output: 3
+
+def minimumOperations(nums):
+    count = 0
+    for i in nums:
+        if i%3 != 0:
+            count+=1 
+    return count
+
+print(minimumOperations([1,2,3,4]))
 
