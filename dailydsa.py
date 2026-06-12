@@ -177,12 +177,21 @@ def minimumOperations(nums):
 #? Output: -4
 
 def alternatingSum(nums):
-    if len(nums) == 1:
-        return nums[0]
+    
+    total = 0
     for i in range(len(nums)):
-        if i%2 != 0:
-            nums[i] = nums[i]*-1
-    return sum(nums)
+        if i%2 == 0:
+            total +=  nums[i]
+        else:
+            total -= nums[i]
+    return total
+    
+    # if len(nums) == 1:
+    #     return nums[0]
+    # for i in range(len(nums)):
+    #     if i%2 != 0:
+    #         nums[i] = nums[i]*-1
+    # return sum(nums)
 
 # print(alternatingSum([1,3,5,7]))
 
