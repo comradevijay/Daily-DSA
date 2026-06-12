@@ -131,6 +131,17 @@ def maxProfit(prices):
             max_profit = profit 
     return max_profit
 
-print(maxProfit([7,1,5,3,6,4]))
+# print(maxProfit([7,1,5,3,6,4]))
+
+
+#! 3783. Mirror Distance of an Integer
+#? Input: n = 25
+#? Output: 27
+
+def mirrorDistance(n):
+    return abs(n - int(str(n)[::-1]))
+
+print(mirrorDistance(25))
+
 
 
