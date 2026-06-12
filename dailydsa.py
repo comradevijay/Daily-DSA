@@ -108,3 +108,16 @@ def minOperations(nums, k):
 
 # print(minOperations([3,9,7], 5))
 
+#! 121. Best Time to Buy and Sell Stock
+#? Input: prices = [7,1,5,3,6,4]
+#? Output: 5
+
+def maxProfit(prices):
+    minVal = prices[0]
+    ans = 0
+    for i in range(1,len(prices)):
+        ans = max(ans, prices[i] - minVal)
+        minVal = min(minVal, prices[i])
+    return ans 
+
+print(maxProfit([7,1,5,3,6,4]))
