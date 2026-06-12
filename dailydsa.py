@@ -113,11 +113,24 @@ def minOperations(nums, k):
 #? Output: 5
 
 def maxProfit(prices):
-    minVal = prices[0]
-    ans = 0
-    for i in range(1,len(prices)):
-        ans = max(ans, prices[i] - minVal)
-        minVal = min(minVal, prices[i])
-    return ans 
+    
+    # minVal = prices[0]
+    # ans = 0
+    # for i in range(1,len(prices)):
+    #     ans = max(ans, prices[i] - minVal)
+    #     minVal = min(minVal, prices[i])
+    # return ans 
+
+    min_price = prices[0]
+    max_profit = 0 
+    for price in prices:
+        profit  = price - min_price
+        if price < min_price:
+            min_price = price
+        if profit > max_profit:
+            max_profit = profit 
+    return max_profit
 
 print(maxProfit([7,1,5,3,6,4]))
+
+
