@@ -184,6 +184,6 @@ def alternatingSum(nums):
             nums[i] = nums[i]*-1
     return sum(nums)
 
-print(alternatingSum([1,3,5,7]))
+# print(alternatingSum([1,3,5,7]))
 
 
