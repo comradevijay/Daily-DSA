@@ -141,7 +141,21 @@ def maxProfit(prices):
 def mirrorDistance(n):
     return abs(n - int(str(n)[::-1]))
 
-print(mirrorDistance(25))
+# print(mirrorDistance(25))
 
+#! 2894. Divisible and Non-divisible Sums Difference
+#? Input: n = 10, m = 3
+#? Output: 19
 
+def differenceOfSums(n, m):
+    num1 = 0
+    num2 = 0
+    for i in range(1,n+1):
+        if i%m!=0:
+            num1+=i
+        else:
+            num2+=i
+    return num1 - num2 
+
+print(differenceOfSums(10, 3))
 
