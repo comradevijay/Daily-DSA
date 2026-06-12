@@ -170,5 +170,20 @@ def minimumOperations(nums):
             count+=1 
     return count
 
-print(minimumOperations([1,2,3,4]))
+# print(minimumOperations([1,2,3,4]))
+
+#! 3701. Compute Alternating Sum
+#? Input: nums = [1,3,5,7]
+#? Output: -4
+
+def alternatingSum(nums):
+    if len(nums) == 1:
+        return nums[0]
+    for i in range(len(nums)):
+        if i%2 != 0:
+            nums[i] = nums[i]*-1
+    return sum(nums)
+
+print(alternatingSum([1,3,5,7]))
+
 
