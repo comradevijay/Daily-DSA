@@ -245,3 +245,22 @@ def numberOfMatches(n):
     return res
 
 # print(numberOfMatches(7))
+
+#! 1662. Check If Two String Arrays are Equivalent
+#? Input: word1 = ["ab", "c"], word2 = ["a", "bc"]
+#? Output: true
+
+def arrayStringsAreEqual(word1, word2):
+    str1 = ''
+    str2 = ''
+    for i in word1:
+        str1 += i   
+    for i in word2:
+        str2 += i   
+    
+    if str1 == str2:
+        return True
+    else:
+        return False  
+    
+print(arrayStringsAreEqual(["ab", "c"], ["a", "bc"])) 
