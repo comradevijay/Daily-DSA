@@ -244,4 +244,4 @@ def numberOfMatches(n):
         n = (n // 2) + (n % 2)
     return res
 
-print(numberOfMatches(7))
+# print(numberOfMatches(7))
