@@ -292,3 +292,22 @@ def separateDigits(nums):
     return arr
 
 # print(separateDigits([13,25,83,77]))
+
+#! 709. To Lower Case
+#? Input: s = "Hello"
+#? Output: "hello"
+
+def toLowerCase(s):
+    str1 = ''
+    arr = []
+    for i in s:
+        if ord(i) >= 65 and ord(i) <= 90:
+            arr.append(ord(i) + 32) 
+        else:
+            arr.append(ord(i))
+    for i in arr:
+        str1 += chr(i)
+    return str1 
+
+print(toLowerCase("Hello"))
+            
