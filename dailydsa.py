@@ -277,3 +277,18 @@ def sumOfMultiples(n):
     return total 
 
 # print(sumOfMultiples(7))
+
+#! 2553. Separate the Digits in an Array
+#? Input: nums = [13,25,83,77]
+#? Output: [1,3,2,5,8,3,7,7]
+
+def separateDigits(nums):
+    str1 = ''
+    arr = []
+    for i in nums:
+        str1 += str(i) 
+    for j in str1:
+        arr.append(int(j))
+    return arr
+
+print(separateDigits([13,25,83,77]))
