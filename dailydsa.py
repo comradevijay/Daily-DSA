@@ -223,12 +223,25 @@ def countDigitOccurrences(nums, digit):
     count = 0
     for i in nums:
         str1 += str(i)   
-    
     for i in str1:
         if i == str(digit):
             count+=1 
     return count  
 
-print(countDigitOccurrences([12,54,32,22], 2))
+# print(countDigitOccurrences([12,54,32,22], 2))
 
+#! 1688. Count of Matches in Tournament
+#? Input: n = 7
+#? Output: 6
 
+def numberOfMatches(n):
+    
+    # return n-1  
+
+    res = 0
+    while n > 1:
+        res += n // 2
+        n = (n // 2) + (n % 2)
+    return res
+
+print(numberOfMatches(7))
