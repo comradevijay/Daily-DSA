@@ -212,6 +212,23 @@ def differenceOfSum(nums):
     
     return elementSum - digitSum
 
-print(differenceOfSum([1,15,6,3]))
+# print(differenceOfSum([1,15,6,3]))
+
+#! 3895. Count Digit Appearances
+#? Input: nums = [12,54,32,22], digit = 2
+#? Output: 4
+
+def countDigitOccurrences(nums, digit):
+    str1 = ''
+    count = 0
+    for i in nums:
+        str1 += str(i)   
+    
+    for i in str1:
+        if i == str(digit):
+            count+=1 
+    return count  
+
+print(countDigitOccurrences([12,54,32,22], 2))
 
 
