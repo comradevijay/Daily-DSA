@@ -276,4 +276,4 @@ def sumOfMultiples(n):
             total += i  
     return total 
 
-print(sumOfMultiples(7))
+# print(sumOfMultiples(7))
