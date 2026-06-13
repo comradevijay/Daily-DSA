@@ -291,4 +291,4 @@ def separateDigits(nums):
         arr.append(int(j))
     return arr
 
-print(separateDigits([13,25,83,77]))
+# print(separateDigits([13,25,83,77]))
