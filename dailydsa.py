@@ -195,4 +195,23 @@ def alternatingSum(nums):
 
 # print(alternatingSum([1,3,5,7]))
 
+#! 2535. Difference Between Element Sum and Digit Sum of an Array
+#? Input: nums = [1,15,6,3]
+#? Output: 
+
+def differenceOfSum(nums):
+    elementSum = 0
+    for i in nums:
+        elementSum+=i   
+    str1 = ''
+    for i in nums:
+        str1 += str(i)   
+    digitSum = 0
+    for i in range(len(str1)):
+        digitSum += int(str1[i])
+    
+    return elementSum - digitSum
+
+print(differenceOfSum([1,15,6,3]))
+
 
