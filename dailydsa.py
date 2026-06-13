@@ -263,4 +263,4 @@ def arrayStringsAreEqual(word1, word2):
     else:
         return False  
     
-print(arrayStringsAreEqual(["ab", "c"], ["a", "bc"])) 
+# print(arrayStringsAreEqual(["ab", "c"], ["a", "bc"])) 
