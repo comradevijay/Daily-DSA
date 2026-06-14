@@ -308,8 +308,5 @@ def toLowerCase(s):
     for i in arr:
         str1 += chr(i)
     return str1 
-
-
-
 # print(toLowerCase("Hello"))
             
