@@ -309,4 +309,22 @@ def toLowerCase(s):
         str1 += chr(i)
     return str1 
 # print(toLowerCase("Hello"))
-            
+
+
+#! 344. Reverse String
+#? Input: s = ["h","e","l","l","o"]
+#? Output: ["o","l","l","e","h"]
+
+def reverseString(s):
+    l = 0
+    r = len(s) -1 
+    while l < r:
+        temp = s[l]
+        s[l] = s[r]
+        s[r] = temp 
+        
+        l += 1
+        r -= 1
+    return s    
+
+print(reverseString(['H', 'e', 'l', 'l', 'o']))
