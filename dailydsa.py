@@ -328,3 +328,20 @@ def reverseString(s):
     return s    
 
 # print(reverseString(['H', 'e', 'l', 'l', 'o']))
+
+
+#! 3945. Digit Frequency Score
+#? Input: n = 122
+#? Output: 5
+
+def digitFrequencyScore(n):
+    s = str(n) 
+    ans = 0 
+    for i in range(len(s)):
+        ans += int(s[i])
+        
+    return ans
+
+print(digitFrequencyScore(122))
+
+
