@@ -342,6 +342,6 @@ def digitFrequencyScore(n):
         
     return ans
 
-print(digitFrequencyScore(122))
+# print(digitFrequencyScore(122))
 
 
