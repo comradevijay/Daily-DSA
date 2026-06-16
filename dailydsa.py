@@ -344,4 +344,23 @@ def digitFrequencyScore(n):
 
 # print(digitFrequencyScore(122))
 
+#! 1480. Running Sum of 1d Array
+#? Input: nums = [1,2,3,4]
+#? Output: [1,3,6,10]
+
+def runningSum(nums):
+    
+    # for i in range(1, len(nums)):
+    #     nums[i] = nums[i] + nums[i-1]
+    # return nums 
+
+    arr = []
+    ans = 0
+    for i in nums:
+        ans += i    
+        arr.append(ans)
+    return arr
+
+print(runningSum([1, 2, 3, 4]))
+
 
