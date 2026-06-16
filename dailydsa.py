@@ -361,6 +361,6 @@ def runningSum(nums):
         arr.append(ans)
     return arr
 
-print(runningSum([1, 2, 3, 4]))
+# print(runningSum([1, 2, 3, 4]))
 
 
