@@ -377,3 +377,25 @@ def sumOfSquares(nums):
     return totalSum  
 
 # print(sumOfSquares([1, 2, 3, 4]))
+
+#! 3884. First Matching Character From Both Ends
+#? Input: s = "abcacbd"
+#? Output: 1
+
+def firstMatchingIndex(s):
+    l = 0
+    r = len(s) -1 
+    while l <= r:
+        if s[l] == s[r]:
+            return l   
+        
+        l += 1
+        r -= 1
+        
+    return -1
+
+# print(firstMatchingIndex('abcdbc'))
+
+
+
+
