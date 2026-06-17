@@ -364,3 +364,16 @@ def runningSum(nums):
 # print(runningSum([1, 2, 3, 4]))
 
 
+#! 2778. Sum of Squares of Special Elements 
+#? Input: nums = [1,2,3,4]
+#? Output: 21
+
+def sumOfSquares(nums):
+    n = len(nums)
+    totalSum = 0
+    for i in range(n):
+        if n % (i+1) == 0:
+            totalSum += (nums[i] * nums[i])
+    return totalSum  
+
+print(sumOfSquares([1, 2, 3, 4]))
