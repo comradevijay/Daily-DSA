@@ -376,4 +376,4 @@ def sumOfSquares(nums):
             totalSum += (nums[i] * nums[i])
     return totalSum  
 
-print(sumOfSquares([1, 2, 3, 4]))
+# print(sumOfSquares([1, 2, 3, 4]))
