@@ -391,11 +391,27 @@ def firstMatchingIndex(s):
         
         l += 1
         r -= 1
-        
+            
     return -1
 
 # print(firstMatchingIndex('abcdbc'))
 
+#! 167. Two Sum II - Input Array Is Sorted
+#? Input: nums = [2,7,11,15], target = 9
+#? Output: [0,1]
 
+def twoSum(numbers, target):
+    l = 0
+    r = len(numbers) -1
+    while l < r:
+        currSum = numbers[l] + numbers[r]
+        if currSum == target:
+            return [l+1, r+1]
+        elif currSum < target:
+            l += 1
+        else:
+            r -=  1
+            
+    return []
 
-
+print(twoSum([2,7,11,15], 9))
