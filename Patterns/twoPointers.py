@@ -25,7 +25,7 @@ def twoSum(numbers, target):
 
 numbers = [2,7,11,15]
 target = 9
-print(twoSum(numbers, target))
+# print(twoSum(numbers, target))
 
 
 
@@ -34,6 +34,64 @@ print(twoSum(numbers, target))
 #? The fast pointer moves two steps at a time, while the slow pointer moves one step at a time.
 #? This pattern is often used to solve problems that involve finding the middle of a linked list, 
 #? detecting cycles in a linked list, or finding the nth node from the end of a linked list.
+
+#! Example problem: 141. Linked List Cycle 
+# Input: head = [3,2,0,-4], pos = 1
+# Output: true
+
+def hasCycle(head):
+    slow = head
+    fast = head
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+        if slow == fast:
+            return True
+    return False
+
+head = [3,2,0,-4]
+pos = 1
+# print(hasCycle(head))
+
+
+
+# Definition for singly-linked list
+class ListNode:
+    def __init__(self, val):
+        self.val = val
+        self.next = None
+
+
+# Function to create a linked list with a cycle
+def createLinkedList(arr, pos):
+    if not arr:
+        return None
+    nodes = [ListNode(x) for x in arr]
+    for i in range(len(arr) - 1):
+        nodes[i].next = nodes[i + 1]
+    if pos != -1:
+        nodes[-1].next = nodes[pos]
+    return nodes[0]
+
+def hasCycle(head):
+    slow = head
+    fast = head
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+        if slow == fast:
+            return True
+        
+    return False
+
+head = [3, 2, 0, -4]
+pos = 1
+linkedHead = createLinkedList(head, pos)
+print(hasCycle(linkedHead))
+
+
+
+
 
 #! Partition & Merge Patterns
 #? Partitioning an array involves dividing it into two or more subarrays based on a certain condition.
